@@ -1,0 +1,30 @@
+<h2 id="gg">{{bookmarksListCtrl.getCurrentCategory().name}}</h2>
+
+<div><h3>{{bookmarksListCtrl.getCurrentCategory.name}}</h3>
+    <hr/>
+    <table class="table table-striped table-hover">
+        <thead>
+        <th></th>
+        <th>name</th>
+        <th>action</th>
+        </thead>
+        <tbody>
+        <tr ng-class="{'success':isEditedBookmark(bookmark)}"
+            ng-repeat="bookmark in bookmarksListCtrl.bookmarks | filter:{category:bookmarksListCtrl.getCurrentCategory().id}">
+            <td>{{$index}}</td>
+            <td><a href="{{bookmark.url}}">{{bookmark.name}}</a></td>
+            <td>
+                <button class="btn btn-link" ui-sref="demo.categories.bookmarks.edit({bookmarkId:bookmark.id})"><i class="fa fa-pencil"></i>
+                </button>
+                <button class="btn btn-link" ng-click="bookmarksListCtrl.deleteBookmark(bookmark)"><i class="fa fa-remove"></i>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <hr/>
+    <ui-view ng-if="bookmarksListCtrl.getCurrentCategory() && !isEditing">
+        <button class="btn btn-link" ui-sref="demo.categories.bookmarks.create"><i class="fa fa-plus"></i> Create bookmark
+        </button>
+    </ui-view>
+</div>

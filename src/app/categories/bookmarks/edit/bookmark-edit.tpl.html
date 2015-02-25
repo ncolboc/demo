@@ -1,0 +1,19 @@
+<h2>{{ editBookmarkCtrl.bookmark.name}}</h2>
+
+<form id="editForm" ng-submit="editBookmarkCtrl.editBookmark(editBookmarkCtrl.bookmark)">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" ng-model="editBookmarkCtrl.bookmark.name" class="form-control" id="name"/>
+    </div>
+    <div class="form-group">
+        <label for="url">Url</label>
+        <input type="text" ng-model="editBookmarkCtrl.bookmark.url" class="form-control" id="url"/>
+    </div>
+
+    <button type="button" class="btn btn-danger pull-right" ng-click="cancelEditing()"><i
+            class="fa fa-remove"></i> Cancel
+    </button>
+    <button type="submit" class="btn btn-success pull-right" style="margin-right:10px"><i
+            class="fa fa-save"></i> Save
+    </button>
+</form>
