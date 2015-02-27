@@ -10,49 +10,61 @@
 </head>
 <body>
 
-    <header class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a href="#" class="navbar-brand">Demo site</a></span>
-            </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><i class="fa fa-automobile"></i> About</a></li>
-                <li><a href="#"><i class="fa fa-automobile"></i> User</a></li>
-                <li><a href="#"><i class="fa fa-automobile"></i> Info</a></li>
-            </ul>
-        </div>
-    </header>
-
+<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
     <div class="container">
-
-        <div class="row">
-
-            <div id="aside" class="col-md-4" ui-view="categories">
-            </div>
-            <div  class="col-md-8 ui-view-container" style="padding: 0" >
-                <div id="content" ui-view="bookmarks">
-            </div>
-            </div>
+        <div class="navbar-header">
+            <a href="#/" class="navbar-brand">Demo site</a></span>
         </div>
+        <ul class="nav navbar-nav navbar-right ">
+            <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Samples
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li role="presentation" class="dropdown-header">Cross-Origin</li>
+                    <li>
+                        <a ui-sref="cross-origin">XHR with express.js</a>
+                    </li>
+                    <li role="presentation" class="dropdown-header">Routing</li>
+                    <li>
+                        <a ui-sref="ui-router.categories">UI-Router</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-automobile"></i> About</a></li>
+            <li><a href="#"><i class="fa fa-automobile"></i> User</a></li>
+            <li><a href="#"><i class="fa fa-automobile"></i> Info</a></li>
+
+        </ul>
     </div>
+</header>
+
+<div class="container" ui-view>
+
+
+</div>
 
 <footer></footer>
 
 <script src="../lib/jquery/dist/jquery.min.js"></script>
 <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../lib/angular/angular.min.js"></script>
+<script src="../lib/angular/angular.min.js"></script>
 <script src="../lib/angular-animate/angular-animate.min.js"></script>
 <script src="../lib/underscore/underscore-min.js"></script>
 <script src="../lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<script src="app/modules/welcomePage/welcomePage.js"></script>
+<script src="app/modules/cross-origin/cross-origin.js"></script>
+<script src="app/modules/ui-router/ui-router.js"></script>
+
 <script src="app/app.js"></script>
 
 
-<script src="app/categories/bookmarks/create/bookmark-create.js"></script>
-<script src="app/categories/bookmarks/edit/bookmark-edit.js"></script>
-<script src="app/categories/bookmarks/bookmarks.js"></script>
+<script src="app/modules/ui-router/categories/bookmarks/create/bookmark-create.js"></script>
+<script src="app/modules/ui-router/categories/bookmarks/edit/bookmark-edit.js"></script>
+<script src="app/modules/ui-router/categories/bookmarks/bookmarks.js"></script>
 <script src="app/common/bookmark-model.js"></script>
 <script src="app/common/category-model.js"></script>
-<script src="app/categories/categories.js"></script>
+<script src="app/modules/ui-router/categories/categories.js"></script>
 
 
 </body>

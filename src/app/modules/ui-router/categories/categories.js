@@ -6,11 +6,11 @@ angular.module('demo.categories', [
 ])
     .config(function ($stateProvider) {
         $stateProvider
-            .state('demo.categories', {
-                url: "/",
+            .state('ui-router.categories', {
+                url: "/categories",
                 views: {
-                    'categories@': {
-                        templateUrl: 'app/categories/categories.tpl.html',
+                    'categories@ui-router': {
+                        templateUrl: 'app/modules/ui-router/categories/categories.tpl.html',
                         controller: 'CategoriesCtrl as categoriesCtrl'
                     }
                 }
