@@ -14,7 +14,7 @@
             <td>{{$index}}</td>
             <td><a href="{{bookmark.url}}">{{bookmark.name}}</a></td>
             <td>
-                <button class="btn btn-link" ui-sref="demo.categories.bookmarks.edit({bookmarkId:bookmark.id})"><i class="fa fa-pencil"></i>
+                <button class="btn btn-link" ui-sref="ui-router.categories.bookmarks.edit({bookmarkId:bookmark.id})"><i class="fa fa-pencil"></i>
                 </button>
                 <button class="btn btn-link" ng-click="bookmarksListCtrl.deleteBookmark(bookmark)"><i class="fa fa-remove"></i>
                 </button>
@@ -24,7 +24,7 @@
     </table>
     <hr/>
     <ui-view ng-if="bookmarksListCtrl.getCurrentCategory() && !isEditing">
-        <button class="btn btn-link" ui-sref="demo.categories.bookmarks.create"><i class="fa fa-plus"></i> Create bookmark
+        <button class="btn btn-link" ui-sref="ui-router.categories.bookmarks.create"><i class="fa fa-plus"></i> Create bookmark
         </button>
     </ui-view>
 </div>

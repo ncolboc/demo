@@ -5,9 +5,9 @@ angular.module('categories.bookmarks.create', [])
 
     .config(function ($stateProvider) {
         $stateProvider
-            .state('demo.categories.bookmarks.create', {
+            .state('ui-router.categories.bookmarks.create', {
                 url: '/bookmarks/create',
-                templateUrl: 'app/categories/bookmarks/create/bookmark-create.tpl.html',
+                templateUrl: 'app/modules/ui-router/categories/bookmarks/create/bookmark-create.tpl.html',
                 controller: 'CreateBookmarksCtrl as createBookmarkCtrl'
             })
     })
@@ -16,7 +16,7 @@ angular.module('categories.bookmarks.create', [])
         var createBookmarkCtrl = this;
 
         function returnToBookmark(){
-            $state.go('demo.categories.bookmarks',{category:$stateParams.category});
+            $state.go('ui-router.categories.bookmarks',{category:$stateParams.category});
         }
 
         createBookmarkCtrl.cancelBookmark = function () {

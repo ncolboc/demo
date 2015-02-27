@@ -5,9 +5,9 @@ angular.module('categories.bookmarks.edit', [])
 
     .config(function ($stateProvider) {
         $stateProvider
-            .state('demo.categories.bookmarks.edit', {
+            .state('ui-router.categories.bookmarks.edit', {
                 url: '/bookmarks/:bookmarkId/edit',
-                templateUrl: 'app/categories/bookmarks/edit/bookmark-edit.tpl.html',
+                templateUrl: 'app/modules/ui-router/categories/bookmarks/edit/bookmark-edit.tpl.html',
                 controller: 'EditBookmarksCtrl as editBookmarkCtrl'
             })
     })
@@ -24,7 +24,7 @@ angular.module('categories.bookmarks.edit', [])
 
         function editBookmark(bookmark){
             BookmarksModel.updateBookmark(editBookmarkCtrl.bookmark)
-            $state.go('demo.categories.bookmarks',{category:$stateParams.category});
+            $state.go('ui-router.categories.bookmarks',{category:$stateParams.category});
         }
 
         editBookmarkCtrl.editBookmark = editBookmark;

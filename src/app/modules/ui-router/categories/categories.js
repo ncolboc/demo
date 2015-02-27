@@ -2,6 +2,7 @@
  * Created by macfly on 21/02/2015.
  */
 angular.module('demo.categories', [
+    'categories.bookmarks',
     'demo.models.categories'
 ])
     .config(function ($stateProvider) {

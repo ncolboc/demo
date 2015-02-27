@@ -10,11 +10,11 @@ angular.module('categories.bookmarks', [
 ])
     .config(function ($stateProvider) {
         $stateProvider
-            .state('demo.categories.bookmarks', {
-                url: 'categories/:category',
+            .state('ui-router.categories.bookmarks', {
+                url: '/:category',
                 views: {
-                    'bookmarks@': {
-                        templateUrl: 'app/categories/bookmarks/bookmarks.tpl.html',
+                    'bookmarks@ui-router': {
+                        templateUrl: 'app/modules/ui-router/categories/bookmarks/bookmarks.tpl.html',
                         controller: 'BookmarksCtrl as bookmarksListCtrl'
                     }
                 }
